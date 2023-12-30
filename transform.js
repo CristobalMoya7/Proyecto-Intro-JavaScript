@@ -83,3 +83,12 @@ const datos = [
     }
 ];
 
+// Filtrar desarrolladores con habilidad en JavaScript
+const desarrolladoresJavascript = datos.filter(desarrollador => desarrollador.habilidades.includes('JavaScript'));
+
+// Obtener nombres de todos los proyectos
+const nombresProyectos = datos.reduce((proyectos, desarrollador) => [...proyectos,...desarrollador.proyectos.map((proyecto) => proyecto.nombre),], []);
+
+
+console.log('Desarrolladores con habilidad en JavaScript:', desarrolladoresJavascript);
+console.log('Nombres de todos los proyectos:', nombresProyectos);
